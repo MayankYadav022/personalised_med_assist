@@ -1,0 +1,31 @@
+id,name,city,area,speciality,address,phone,latitude,longitude
+1,Government General Hospital,Chennai,Park Town,General,"1, Park Town, Chennai, Tamil Nadu 600003",044-25305000,13.0827,80.2707
+2,Apollo Hospital,Chennai,Greams Road,Multi-Specialty,"21, Greams Lane, Off Greams Road, Chennai 600006",044-28290200,13.0615,80.2537
+3,Fortis Malar Hospital,Chennai,Adyar,Multi-Specialty,"52, 1st Main Road, Gandhi Nagar, Adyar, Chennai 600020",044-42892222,13.0067,80.2575
+4,Sri Ramachandra Medical Centre,Chennai,Porur,Multi-Specialty,"1, Ramachandra Nagar, Porur, Chennai 600116",044-45928585,13.0383,80.1419
+5,MIOT International,Chennai,Manapakkam,Multi-Specialty,"4/112, Mount Poonamallee Road, Manapakkam, Chennai 600089",044-42002288,13.0166,80.1582
+6,Government Hospital Tambaram,Chennai,Tambaram,General,"Tambaram, Chennai, Tamil Nadu 600045",044-22343344,12.9249,80.1000
+7,Dr. Kamakshi Memorial Hospital,Chennai,Pallikaranai,Multi-Specialty,"1, Radial Road, Pallikaranai, Chennai 600100",044-66300300,12.9385,80.2091
+8,Global Health City,Chennai,Perumbakkam,Multi-Specialty,"439, Cheran Nagar, Perumbakkam, Chennai 600100",044-44777000,12.8964,80.2082
+9,Chettinad Hospital & Research Institute,Chennai,Kelambakkam,Multi-Specialty,"Rajiv Gandhi Salai, Kelambakkam, Chennai 603103",044-47411000,12.7855,80.2222
+10,SRM Medical College Hospital,Chennai,Kattankulathur,Multi-Specialty,"SRM University, Kattankulathur, Chennai 603203",044-27417000,12.8231,80.0454
+11,Heart Foundation Hospital,Chennai,T Nagar,Cardiology,"15, Thyagaraya Road, T Nagar, Chennai 600017",044-28154555,13.0418,80.2341
+12,Chennai Skin Foundation,Chennai,Anna Nagar,Dermatology,"W-295, 2nd Avenue, Anna Nagar, Chennai 600040",044-26268888,13.0850,80.2101
+13,Neuro Foundation,Chennai,Alwarpet,Neurology,"15, McNichols Road, Alwarpet, Chennai 600018",044-24981000,13.0349,80.2516
+14,Ortho One Hospital,Chennai,Coimbatore,Orthopedics,"100, Diwan Bahadur Road, Coimbatore 641018",0422-2233333,11.0168,76.9558
+15,PSG Hospitals,Coimbatore,Peelamedu,Multi-Specialty,"Peelamedu, Coimbatore 641004",0422-2570170,11.0247,77.0077
+16,Kovai Medical Center,Coimbatore,Avinashi Road,Multi-Specialty,"99, Avinashi Road, Coimbatore 641018",0422-2627777,11.0168,76.9558
+17,Government General Hospital,Madurai,Tallakulam,General,"Alwarpuram, Tallakulam, Madurai 625002",0452-2532536,9.9252,78.1198
+18,Apollo Speciality Hospitals,Madurai,KK Nagar,Multi-Specialty,"Lake View Road, KK Nagar, Madurai 625020",0452-2580892,9.9083,78.1372
+19,Meenakshi Mission Hospital,Madurai,Melur Road,Multi-Specialty,"Melur Road, Madurai 625107",0452-2588900,9.9500,78.1500
+20,Government General Hospital,Trichy,Rockfort,General,"Rockfort, Trichy 620002",0431-2411500,10.7905,78.7047
+21,Kauvery Hospital,Trichy,Thillai Nagar,Multi-Specialty,"No 5, McDonald's Road, Thillai Nagar, Trichy 620018",0431-4025000,10.8269,78.6920
+22,Child Trust Hospital,Chennai,Nungambakkam,Pediatrics,"12-A, Nageswara Road, Nungambakkam, Chennai 600034",044-42001800,13.0604,80.2426
+23,Sankara Nethralaya,Chennai,Cathedral Road,Ophthalmology,"18, College Road, Chennai 600006",044-28271616,13.0615,80.2537
+24,Vijaya Hospital,Chennai,Vadapalani,Multi-Specialty,"180, NSK Salai, Vadapalani, Chennai 600026",044-24881392,13.0500,80.2124
+25,Billroth Hospitals,Chennai,Shenoy Nagar,Multi-Specialty,"43, Lakshmi Talkies Road, Shenoy Nagar, Chennai 600030",044-26600777,13.0787,80.2250
+26,Kaveri Hospital,Chennai,Saidapet,Multi-Specialty,"81, Butt Road, St. Thomas Mount, Chennai 600016",044-22300100,13.0102,80.2116
+27,Prashanth Hospitals,Chennai,Velachery,Multi-Specialty,"36 & 36A, Velachery Main Road, Velachery, Chennai 600042",044-22461999,12.9815,80.2180
+28,Gleneagles Global Health City,Chennai,Perumbakkam,Multi-Specialty,"439, Cheran Nagar, Perumbakkam, Chennai 600100",044-44777000,12.8964,80.2082
+29,Cloudnine Hospital,Chennai,T Nagar,Obstetrics & Gynecology,"54, T Nagar, Chennai 600017",044-42013333,13.0418,80.2341
+30,Manu Hospital,Coimbatore,Race Course,Psychiatry,"123, Race Course Road, Coimbatore 641018",0422-2306666,11.0168,76.9558
