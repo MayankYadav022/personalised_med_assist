@@ -302,14 +302,12 @@ def main():
         google_api_key = st.text_input(
             "Google API Key",
             type="password",
-            value="",
             help="Get your key from https://makersuite.google.com/app/apikey"
         )
         
         locationiq_api_key = st.text_input(
             "LocationIQ API Key (for hospital search)",
             type="password",
-            value="",
             help="Get free key from https://locationiq.com/"
         )
         

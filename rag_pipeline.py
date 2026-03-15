@@ -14,12 +14,7 @@ import numpy as np
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass
 from dotenv import load_dotenv
-# Import a specific class, for example, a document loader
-from langchain_community.document_loaders import CSVLoader
-
-# Example: Import a vector store integration
-from langchain_community.vectorstores import FAISS
-
+from langchain_core.documents import Document
 
 # Load environment variables
 load_dotenv()
@@ -58,7 +53,6 @@ class MedicalRAGPipeline:
         self.db = None
         self.embeddings = None
         self.llm = None
-        self.llm_model_name = None
         
         # Initialize components
         self._load_vector_store()
@@ -110,50 +104,20 @@ class MedicalRAGPipeline:
         except Exception as e:
             print(f"Error loading vector store: {e}")
             raise
-
-    def _candidate_llm_models(self) -> List[str]:
-        """Return ordered Gemini model candidates with env override first."""
-        env_model = (
-            os.getenv("GEMINI_MODEL")
-            or os.getenv("LLM_MODEL")
-            or os.getenv("GOOGLE_MODEL")
-        )
-
-        candidates = []
-        if env_model:
-            candidates.append(env_model.strip())
-
-        # Keep multiple known model IDs to handle API/version availability changes.
-        candidates.extend([
-            "gemini-2.0-flash",
-            "gemini-2.0-flash-lite",
-            "gemini-1.5-flash-latest",
-            "gemini-1.5-flash-8b",
-        ])
-
-        unique_candidates = []
-        for model in candidates:
-            if model and model not in unique_candidates:
-                unique_candidates.append(model)
-        return unique_candidates
     
-    def _initialize_llm(self, model_name: Optional[str] = None) -> None:
+    def _initialize_llm(self) -> None:
         """Initialize the Gemini LLM."""
         try:
             from langchain_google_genai import ChatGoogleGenerativeAI
-
-            if model_name is None:
-                model_name = self._candidate_llm_models()[0]
             
-            print(f"Initializing Gemini LLM ({model_name})...")
+            print("Initializing Gemini LLM...")
             self.llm = ChatGoogleGenerativeAI(
-                model=model_name,
+                model="models/gemini-2.5-flash",
                 temperature=0.3,
                 max_tokens=1024,
                 top_p=0.95,
                 convert_system_message_to_human=True
             )
-            self.llm_model_name = model_name
             print("Gemini LLM initialized successfully")
             
         except Exception as e:
@@ -357,21 +321,6 @@ Please provide a helpful, accurate response based on the context above. Be clear
             return response.content
             
         except Exception as e:
-            err_text = str(e)
-
-            if "NOT_FOUND" in err_text and "model" in err_text.lower():
-                print("Configured Gemini model is unavailable. Trying fallback models...")
-                for candidate_model in self._candidate_llm_models():
-                    if candidate_model == self.llm_model_name:
-                        continue
-
-                    try:
-                        self._initialize_llm(model_name=candidate_model)
-                        response = self.llm.invoke(messages)
-                        return response.content
-                    except Exception as fallback_error:
-                        print(f"Fallback model '{candidate_model}' failed: {fallback_error}")
-
             print(f"Error generating response: {e}")
             return f"I apologize, but I encountered an error generating a response. Please try again. Error: {str(e)}"
     
